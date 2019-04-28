@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="vote.css">
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Rajdhani" rel="stylesheet"> 
+
+    </head>
+    <body>
+        <div class="containerHeader" id="containerHeader">
+            <div class="contentHeader">
+                <p style="font-size:150px;
+                font-family: 'Rajdhani', sans-serif;">
+                <!-- <b>>QUICK COUNT</b> -->
+            </p>
+                <br>
+                <p>QUICK COUNT</p>
+                <br>
+                <p>PILPRES</p>
+                <br>
+                <p>2019</p>
+                
+            </div>
+
+            <div class="dropDownContent" style="width:40%" id="dropDown">
+                    <p style="font-size:40px"> masukkan </p>
+                    <p>jumlah</p>
+                    <p><b>kandidat :</b></p>
+                    <form action="/action_page.php">
+                        <select name="candidat" id="numCandidate">
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                        </select>
+                        <br>
+                        <input type="button" value="> next" onClick="submitCandidate()">
+                    </form>
+            </div>
+
+            <div id="nameInput">
+               <p><i>masukkan nama-nama kandidat :</i></p>
+            </div>
+
+        </div>
+
+       
+        <div class="containerContent" style="display:none" id="containerContent">
+           
+            <div class="voteCounter"></div>
+
+            <div id="voteChart" style="display:none"></div>
+
+            <div id="buttonChart" style="display:none;border-top:solid black;"></div>
+
+            <div id="buttonDone">
+                <input type="button" onclick="reportVote()" value="> selesai">
+            </div>
+
+        </div>
+
+        <div id="containerResult" style="display:none">
+            <div id="tableResult"></div>
+        </div>
+
+
+        <script src="./function.js">
+
+       
+        </script>
+    </body>
+</html>
